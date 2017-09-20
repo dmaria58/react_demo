@@ -14,15 +14,15 @@
 
 ## 详情
 
-###登录页面
+登录页面
 ![Alt text](/img/login.png "登录页")
 	页面详情请看 page/webs/Component/login.js
 
-###图表页
+图表页
 ![Alt text](/img/page1.png "图表页")
 	页面详情请看 page/webs/Component/page1.js
 
-###表单页
+表单页
 ![Alt text](/img/page2.png "表单页")
 	页面详情请看 page/webs/Component/page2.js
 
