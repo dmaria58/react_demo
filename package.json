@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "node app.js",
     "hot": "node app_hot.js",
-    "dist": "webpack --config webpack.config.dist.js --progress --colors -p",
+    "dist": "webpack --config webpack.config.dist.js --progress --colors -p"
   },
   "author": "maria",
   "license": "MIT",
