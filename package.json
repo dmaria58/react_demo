@@ -7,10 +7,9 @@
     "dev": "node app.js",
     "hot": "node app_hot.js",
     "dist": "webpack --config webpack.config.dist.js --progress --colors -p",
-    "dist2": "webpack --config webpack.config.dist2.js --progress --colors -p"
   },
   "author": "maria",
-  "license": "react-demo",
+  "license": "MIT",
   "dependencies": {
     "antd": "^2.13.1",
     "echarts-for-react": "^1.1.6",
