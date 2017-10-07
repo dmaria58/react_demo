@@ -6,7 +6,6 @@ const config = require('./webpack.config.hot');
 const proxyMiddleware = require('http-proxy-middleware');
 const app = new Koa();
 const compiler = webpack(config);
-router.post('/upload',async function (ctx, next) {})
 app.use(require('koa-webpack-dev-middleware')(compiler, {
 	publicPath: config.output.publicPath,
 	hot: true,

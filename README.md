@@ -6,7 +6,7 @@
 
 ## Run
 	1、npm run dist  (发布时打包，在page/main/dist 文件夹下生成打包文件) 
-	2、npm run hot  （热替换开发模式，打开http://localhost:8888/） 或者 	npm run dev  （一般开发模式，打开http://localhost:3000/）推荐使用热替换开发模式
+	2、npm run hot  （热替换开发模式，打开http://localhost:8888/）
 
 ## 使用
   登录账号:maria,密码：1
