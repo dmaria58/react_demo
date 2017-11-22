@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin'); //css单独打包
 var HtmlWebpackPlugin = require('html-webpack-plugin'); //生成html
-
+var ParallelUglifyPlugin = require('webpack-parallel-uglify-plugin');
 //定义地址
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, './page/webs/src'); //__dirname 中的src目录，以此类推
@@ -76,14 +76,17 @@ module.exports = {
         new ExtractTextPlugin('[name].css'),
         //提取出来的样式和common.js会自动添加进发布模式的html文件中，原来的html没有
         new webpack.optimize.CommonsChunkPlugin("common", "common.bundle.js"),
-        new webpack.optimize.UglifyJsPlugin({
-            output: {
-                comments: false, // remove all comments
-            },
-            compress: {
-                warnings: false
-            }
-        })
+        new ParallelUglifyPlugin({  //优化打包过慢
+           cacheDir: BUILD_PATH,
+           uglifyJS:{
+             output: {
+               comments: false
+             },
+             compress: {
+               warnings: false
+             }
+           }
+         })
     ],
     resolve: {
         extensions: ['', '.js', '.jsx', '.less', '.scss', '.css'] //后缀名自动补全
